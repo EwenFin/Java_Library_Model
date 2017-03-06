@@ -24,6 +24,9 @@ public class Library {
   }
 
   public void insert(Book book) {
+    if(isStockFull()) {
+      return;
+    }
     int index = stockCount();
     stock[index] = book;
   }
