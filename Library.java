@@ -5,7 +5,7 @@ public class Library {
 
   public Library(String name){
     this.name = name;
-    this.stock = new Book[5];
+    this.stock = new Book[10];
   }
 
   public String getName() {
@@ -28,11 +28,16 @@ public class Library {
     stock[index] = book;
   }
 
+  public boolean isStockFull() {
+    return stockCount() == stock.length;
+  }
+
+
   // public void borrow(Book book) {
   //   if(stockCount()) = 0 {
   //     return;
   //   }
-    
+
   // }
 
 }
